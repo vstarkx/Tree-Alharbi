@@ -9,7 +9,8 @@ A modern, responsive web application for visualizing and managing family connect
 ## 📖 Quick Links
 
 - [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
-- [Deployment Guide](DEPLOYMENT.md) - Deployment details and troubleshooting
+- [Deployment Guide](DEPLOYMENT.md) - Deployment details and setup
+- [Troubleshooting Guide](TROUBLESHOOTING.md) - Common issues and solutions
 - [GitHub Repository](https://github.com/vstarkx/Tree-Alharbi)
 
 ## Features
