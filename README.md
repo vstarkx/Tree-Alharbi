@@ -2,6 +2,16 @@
 
 A modern, responsive web application for visualizing and managing family connections. Built with React, TailwindCSS, and react-d3-tree.
 
+## 🚀 Live Demo
+
+**Visit the live application:** [https://vstarkx.github.io/Tree-Alharbi/](https://vstarkx.github.io/Tree-Alharbi/)
+
+## 📖 Quick Links
+
+- [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
+- [Deployment Guide](DEPLOYMENT.md) - Deployment details and troubleshooting
+- [GitHub Repository](https://github.com/vstarkx/Tree-Alharbi)
+
 ## Features
 
 - 🌳 **Interactive Tree Visualization** - View your family tree with an interactive, zoomable interface
