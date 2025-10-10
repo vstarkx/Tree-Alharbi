@@ -1,144 +1,51 @@
 import { Link } from 'react-router-dom';
-import { TreePine, Users, Heart, ArrowRight } from 'lucide-react';
+import { TreePine, ArrowRight } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-primary-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-        <div className="text-center space-y-8">
-          <div className="flex justify-center">
-            <TreePine className="h-20 w-20 md:h-24 md:w-24 text-primary-600" />
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-            Visualize Your Family Tree
-          </h1>
-          
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Create, manage, and explore your family connections with our beautiful and intuitive family tree builder. Perfect for all ages.
-          </p>
+    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 flex items-center justify-center relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+      </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Link
-              to="/tree"
-              className="flex items-center space-x-2 px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium text-lg shadow-lg hover:shadow-xl"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="h-5 w-5" />
-            </Link>
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+        {/* Icon */}
+        <div className="flex justify-center mb-8 animate-float">
+          <div className="relative">
+            <div className="absolute inset-0 bg-emerald-400 rounded-full blur-2xl opacity-40"></div>
+            <TreePine className="relative h-28 w-28 md:h-36 md:w-36 text-emerald-600" strokeWidth={1.5} />
           </div>
         </div>
+        
+        {/* Title */}
+        <h1 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 mb-6 tracking-tight">
+          Family Tree
+        </h1>
+        
+        {/* Subtitle */}
+        <p className="text-xl md:text-3xl text-gray-700 mb-16 max-w-3xl mx-auto font-light">
+          Build and visualize your family connections
+        </p>
 
-        {/* Features Section */}
-        <div className="mt-20 md:mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 bg-primary-100 rounded-full">
-                <Users className="h-8 w-8 text-primary-600" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 text-center mb-3">
-              Easy to Use
-            </h3>
-            <p className="text-gray-600 text-center">
-              Add family members with a simple form. No technical knowledge required.
-            </p>
-          </div>
+        {/* CTA Button */}
+        <Link
+          to="/tree"
+          className="group inline-flex items-center space-x-3 px-12 py-5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-2xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 font-semibold text-xl shadow-2xl hover:shadow-3xl hover:scale-105 transform"
+        >
+          <span>Start Building</span>
+          <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+        </Link>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 bg-primary-100 rounded-full">
-                <TreePine className="h-8 w-8 text-primary-600" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 text-center mb-3">
-              Interactive Tree
-            </h3>
-            <p className="text-gray-600 text-center">
-              Visualize relationships with an interactive, zoomable tree view.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="flex justify-center mb-4">
-              <div className="p-3 bg-primary-100 rounded-full">
-                <Heart className="h-8 w-8 text-primary-600" />
-              </div>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 text-center mb-3">
-              Fully Responsive
-            </h3>
-            <p className="text-gray-600 text-center">
-              Works perfectly on mobile, tablet, and desktop devices.
-            </p>
-          </div>
-        </div>
-
-        {/* How It Works Section */}
-        <div className="mt-20 md:mt-32 bg-white rounded-2xl shadow-xl p-8 md:p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            How It Works
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center space-y-4">
-              <div className="flex justify-center">
-                <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                  1
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">
-                Add Members
-              </h3>
-              <p className="text-gray-600">
-                Click "Add Member" and fill in the details like name, date of birth, and photo.
-              </p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="flex justify-center">
-                <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                  2
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">
-                Link Relationships
-              </h3>
-              <p className="text-gray-600">
-                Select a parent to automatically connect family members in the tree.
-              </p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="flex justify-center">
-                <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                  3
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">
-                Explore & Manage
-              </h3>
-              <p className="text-gray-600">
-                View your tree, click on members for details, and edit or delete as needed.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/tree"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium text-lg shadow-lg hover:shadow-xl"
-            >
-              <span>Start Building Your Tree</span>
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
-        </div>
+        {/* Small hint text */}
+        <p className="mt-8 text-sm text-gray-500">
+          Simple • Beautiful • Intuitive
+        </p>
       </div>
     </div>
   );
 };
 
 export default Home;
-

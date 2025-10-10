@@ -6,11 +6,7 @@ export const saveFamilyData = (data) => {
 
 export const loadFamilyData = () => {
   const data = localStorage.getItem('familyTreeData');
-  return data ? JSON.parse(data) : getInitialData();
-};
-
-export const getInitialData = () => {
-  return [];
+  return data ? JSON.parse(data) : [];
 };
 
 export const generateId = () => {
@@ -28,11 +24,6 @@ export const convertToTreeStructure = (members) => {
       name: member.name,
       attributes: {
         id: member.id,
-        dateOfBirth: member.dateOfBirth,
-        relation: member.relation,
-        photo: member.photo,
-        email: member.email,
-        phone: member.phone,
       },
       children: []
     };
@@ -68,4 +59,3 @@ export const getDescendants = (members, parentId) => {
   findChildren(parentId);
   return descendants;
 };
-
